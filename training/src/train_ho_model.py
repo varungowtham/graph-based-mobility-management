@@ -20,7 +20,7 @@ def generateDataSet(graphIndicesPath: str, convEModel: ConvE):
         inputTensor = inputTensor.detach()
         
         outputTensor = [1, 0]
-        if rsrq < -20:
+        if rsrq < 13:
             outputTensor = [0, 1]
         
         data['rsrqIndex'] = inputIndex
