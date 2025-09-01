@@ -73,4 +73,3 @@ class ConvE(torch.nn.Module):
         pred = torch.sigmoid(x)
 
         return pred
-    

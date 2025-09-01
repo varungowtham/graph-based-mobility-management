@@ -17,8 +17,8 @@ def runRSRQHOInference(rsrq: int):
     # load relevant json files
     graphIndicesJSON = loadJSONFromFile(graphIndicesPath)
     
-    rsrqStr = str(rsrq)
-    rsrqLabel = construcLabel('UERSRQ', rsrqStr)
+    rsrqStr = str(rsrq) # integer string
+    rsrqLabel = construcLabel('UERSRQ', rsrqStr) # Entity label
     
     # load the convE model
     numElem = graphIndicesJSON['numElem']
@@ -37,8 +37,8 @@ def runRSRQHOInference(rsrq: int):
     rsrqEmbedding: torch.Tensor = convEModel.emb_e(torch.LongTensor([rsrqIndex])).cpu()
     
     prediction = rsrqHOModel.forward(rsrqEmbedding)
+    print(prediction.size())
     prediction = prediction.tolist()[0]
-    
     print(prediction)
     decision = prediction.index(max(prediction))
     
@@ -48,4 +48,4 @@ def runRSRQHOInference(rsrq: int):
         print("Perform Handover")
 
 if __name__=='__main__':
-    runRSRQHOInference(10)
+    runRSRQHOInference(-21)
