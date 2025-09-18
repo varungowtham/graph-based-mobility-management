@@ -25,4 +25,4 @@ This repository offers a practical, end-to-end path from raw domain data to stru
 
 # Contact Information
 
-If you have any questions please create an issue or you can reach me via [e-mail](mailto:varun.gowtham@mailbox.org)
+If you have any questions please create an issue or you can reach me via [e-mail](mailto:varun.gowtham@mailbox.org).
